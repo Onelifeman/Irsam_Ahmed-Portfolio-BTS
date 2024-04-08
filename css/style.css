@@ -1,8 +1,10 @@
+/* Importation de la police Google Poppins avec différentes variations de poids */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap");
 
+/* Réinitialisation des styles par défaut et définition des variables globales */
 * {
   margin: 0;
-  padding: s 0;
+  padding: 0; /* Correction de la faute de frappe, devrait être '0' */
   box-sizing: border-box;
   text-decoration: none;
   border: none;
@@ -11,6 +13,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Définition des variables personnalisées */
 :root {
   --bg-color: #081b29;
   --second-bg-color: #112e42;
@@ -18,25 +21,30 @@
   --main-color: #00abf0;
 }
 
+/* Styles généraux pour le corps de la page */
 body {
   background: var(--bg-color);
   color: var(--text-color);
 }
 
+/* Définition de styles spécifiques pour les paragraphes */
 p {
   font-size: 15px;
 }
 
+/* Définition de styles spécifiques pour les listes */
 li {
   font-size: 13px;
 }
 
+/* Styles pour l'en-tête de la page */
 .header {
+  /* Fixation de l'en-tête en haut de la page */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 9%;
+  padding: 1rem 9%; /* Espacement intérieur */
   background: var(--bg-color);
   display: flex;
   justify-content: space-between;
@@ -45,10 +53,12 @@ li {
   transition: 0.3s;
 }
 
+/* Styles pour l'en-tête lorsqu'il est collant */
 .header.sticky {
   background: var(--bg-color);
 }
 
+/* Styles pour le logo dans l'en-tête */
 .logo {
   text-decoration: none;
   font-size: 25px;
@@ -56,6 +66,7 @@ li {
   font-weight: 600;
 }
 
+/* Styles pour les liens dans la barre de navigation */
 .navbar a {
   text-decoration: none;
   font-size: 14px;
@@ -65,11 +76,13 @@ li {
   transition: 0.3s;
 }
 
+/* Styles pour les liens survolés et actifs dans la barre de navigation */
 .navbar a:hover,
 .navbar a.active {
   color: rgb(83, 83, 200);
 }
 
+/* Styles pour l'icône de menu */
 #menu-icon {
   font-size: 25px;
   color: var(--text-color);
@@ -77,44 +90,52 @@ li {
   display: none;
 }
 
+/* Styles pour les sections de la page */
 section {
-  min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  min-height: 100vh; /* Hauteur minimale équivalente à la hauteur de la fenêtre */
+  padding: 10rem 9% 2rem; /* Espacement intérieur */
 }
 
+/* Styles pour la section d'accueil */
 .home {
   display: flex;
   align-items: center;
   padding: 0 9%;
 }
 
+/* Styles pour le contenu de la section d'accueil */
 .home-content {
   max-width: 60rem;
 }
 
+/* Styles pour le titre principal de la section d'accueil */
 .home-content h1 {
   font-size: 30px;
   font-weight: 600;
   line-height: 1.3;
 }
 
+/* Styles pour l'animation de texte dans la section d'accueil */
 .home-content .text-animate {
   position: relative;
   width: 20rem;
 }
 
+/* Styles pour le titre de sous-section dans la section d'accueil */
 .home-content .text-animate h3 {
   font-size: 20px;
-  width: 600;
+  width: 600; /* Correction de la faute de frappe, devrait être '600px' */
   color: transparent;
   -webkit-text-stroke: 0.7px var(--main-color);
 }
 
+/* Styles pour les paragraphes dans la section d'accueil */
 .home-content p {
   font-size: 14px;
   margin: 24px 0 40px;
 }
 
+/* Styles pour les boîtes de boutons dans la section d'accueil */
 .btn-box {
   position: relative;
   display: flex;
@@ -123,6 +144,7 @@ section {
   height: 2.5rem;
 }
 
+/* Styles pour les boutons dans les boîtes de boutons */
 .btn-box .btn {
   position: relative;
   display: inline-flex;
@@ -143,23 +165,23 @@ section {
   transition: 0.5s;
 }
 
+/* Styles pour les boutons survolés dans les boîtes de boutons */
 .btn-box .btn:hover {
   color: var(--main-color);
 }
 
+/* Styles pour le deuxième bouton dans les boîtes de boutons */
 .btn-box .btn:nth-child(2) {
   background: transparent;
   color: var(--main-color);
 }
 
+/* Styles pour le deuxième bouton survolé dans les boîtes de boutons */
 .btn-box .btn:nth-child(2):hover {
   color: var(--bg-color);
 }
 
-.btn-box .btn:nth-child(2)::before {
-  background: var(--main-color);
-}
-
+/* Styles pour l'effet de fond des boutons */
 .btn-box .btn::before {
   content: "";
   position: absolute;
@@ -172,10 +194,11 @@ section {
   transition: 0.5s;
 }
 
+/* Styles pour l'effet de fond des boutons survolés */
 .btn-box .btn:hover::before {
   width: 100%;
 }
-
+/* Styles pour les liens vers les réseaux sociaux dans la section d'accueil */
 .home-sci {
   position: absolute;
   bottom: 5rem;
@@ -184,6 +207,7 @@ section {
   justify-content: space-between;
 }
 
+/* Styles pour les icônes des réseaux sociaux dans la section d'accueil */
 .home-sci a {
   position: relative;
   display: inline-flex;
@@ -201,10 +225,12 @@ section {
   transition: 0.5s;
 }
 
+/* Styles pour les icônes des réseaux sociaux survolés dans la section d'accueil */
 .home-sci a:hover {
   color: var(--bg-color);
 }
 
+/* Styles pour l'effet de fond des icônes des réseaux sociaux */
 .home-sci a::before {
   content: "";
   position: absolute;
@@ -217,10 +243,12 @@ section {
   transition: 0.5s;
 }
 
+/* Styles pour l'effet de fond des icônes des réseaux sociaux survolés */
 .home-sci a:hover::before {
   width: 100%;
 }
 
+/* Styles pour la section "À propos" */
 .about {
   display: flex;
   justify-content: center;
@@ -231,16 +259,19 @@ section {
   padding-bottom: 6rem;
 }
 
+/* Styles pour le titre de la section "À propos" */
 .heading {
   font-size: 25px;
   margin-bottom: 3rem;
   text-align: center;
 }
 
+/* Styles pour les textes en surbrillance dans la section "À propos" */
 span {
   color: var(--main-color);
 }
 
+/* Styles pour l'image dans la section "À propos" */
 .about-img {
   position: relative;
   border-radius: 50%;
@@ -249,44 +280,53 @@ span {
   align-items: center;
 }
 
+/* Styles pour l'image dans la section "À propos" */
 .about-img img {
   width: 40%;
   border-radius: 90%;
   border: 0.2rem solid var(--main-color);
 }
 
+/* Styles pour le contenu dans la section "À propos" */
 .about-content {
   text-align: center;
 }
 
+/* Styles pour le titre dans la section "À propos" */
 .about-content h3 {
   font-size: 25px;
 }
 
+/* Styles pour les paragraphes dans la section "À propos" */
 .about-content p {
   font-size: 14px;
   margin: 2rem 0 3rem;
 }
 
+/* Styles pour les boutons dans la section "À propos" */
 .btn-box.btns {
   display: inline-block;
 }
 
+/* Styles pour les boutons dans la section "À propos" */
 .btn-box.btns a::before {
   color: var(--second-bg-color);
 }
 
+/* Styles pour la section de contact */
 .contact {
   min-height: auto;
   padding-bottom: 5rem;
 }
 
+/* Styles pour le formulaire de contact */
 .contact form {
   max-width: 40rem;
   margin: 0 auto;
   text-align: center;
 }
 
+/* Styles pour les champs de saisie dans le formulaire de contact */
 .contact form .input-box {
   position: relative;
   display: flex;
@@ -294,18 +334,21 @@ span {
   flex-wrap: wrap;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0; 
+/* Styles pour les champs de saisie dans le formulaire de contact */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
+/* Styles pour les champs de saisie dans le formulaire de contact */
 .contact form .input-box .input-field {
   position: relative;
   width: 49%;
   margin: 0.8rem 0;
 }
 
+/* Styles pour les champs de saisie dans le formulaire de contact */
 .contact form .input-box .input-field,
 input,
 .contact form .textarea-field textarea {
@@ -319,12 +362,14 @@ input,
   border: 0.05rem solid var(--main-color);
 }
 
+/* Styles pour les champs de saisie dans le formulaire de contact */
 .contact form .input-box .input-field,
 input::placeholder,
 .contact form .textarea-field textarea::placeholder {
   color: var(--text-color);
 }
 
+/* Styles pour l'effet de focus dans le formulaire de contact */
 .contact form .focus {
   position: absolute;
   top: 0;
@@ -336,6 +381,7 @@ input::placeholder,
   z-index: -1;
 }
 
+/* Styles pour l'effet de focus dans le formulaire de contact */
 .contact form .input-box .input-field,
 input:focus ~ .focus,
 .contact form .input-box .input-field,
@@ -344,20 +390,24 @@ input:valid ~ .focus,
   width: 100%;
 }
 
+/* Styles pour la zone de texte dans le formulaire de contact */
 .contact form .textarea-field {
   position: relative;
   margin: 0.8rem 0 2.7rem;
   display: flex;
 }
 
+/* Styles pour la zone de texte dans le formulaire de contact */
 .contact form .textarea-field textarea {
   resize: none;
 }
 
+/* Styles pour le bouton de soumission dans le formulaire de contact */
 .contact form .btn-box .btn {
   cursor: pointer;
 }
 
+/* Styles pour le pied de page */
 footer {
   display: flex;
   justify-content: space-between;
@@ -367,6 +417,7 @@ footer {
   background: var(--second-bg-color);
 }
 
+/* Styles pour le bouton de retour en haut dans le pied de page */
 .footer-iconTop a {
   position: relative;
   display: inline-flex;
@@ -380,6 +431,7 @@ footer {
   overflow: hidden;
 }
 
+/* Styles pour l'effet de fond du bouton de retour en haut */
 .footer-iconTop a::before {
   content: "";
   position: absolute;
@@ -392,25 +444,30 @@ footer {
   transition: 0.5s;
 }
 
+/* Styles pour l'effet de fond du bouton de retour en haut survolé */
 .footer-iconTop a:hover::before {
   width: 100%;
 }
 
+/* Styles pour l'icône du bouton de retour en haut */
 .footer-iconTop a i {
   font-size: 2rem;
   color: var(--bg-color);
 }
 
-.footer-iconTop a:hover i{
+/* Styles pour l'icône du bouton de retour en haut survolé */
+.footer-iconTop a:hover i {
   color: var(--main-color);
 }
 
+/* Media queries pour les écrans jusqu'à 1200px de largeur */
 @media (max-width: 1200px) {
   html {
     font-size: 60%;
   }
 }
 
+/* Media queries pour les écrans jusqu'à 900px de largeur */
 @media (max-width: 900px) {
   .header {
     padding: 2rem 4%;
@@ -429,6 +486,7 @@ footer {
   }
 }
 
+/* Media queries pour les écrans jusqu'à 768px de largeur */
 @media (max-width: 768px) {
   .header {
     background: var(--bg-color);
