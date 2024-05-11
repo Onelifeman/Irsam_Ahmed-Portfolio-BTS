@@ -478,6 +478,61 @@ span {
   color: var(--second-bg-color);
 }
 
+
+/* Styles pour la section Veille */
+.veille {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--bg-color);
+  padding: 10rem 9% 5rem;
+}
+
+/* Styles pour le titre de la section Veille */
+.veille .heading {
+  font-size: 25px;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+/* Styles pour le contenu de la section Veille */
+.veille-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour les articles de veille */
+.article {
+  background: var(--second-bg-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les titres des articles de veille */
+.article h3 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+/* Styles pour les liens "Lire la suite" des articles de veille */
+.article a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--main-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Styles pour les liens "Lire la suite" survolés des articles de veille */
+.article a:hover {
+  color: rgb(83, 83, 200);
+}
+
 /* Styles pour la section de contact */
 .contact {
   min-height: auto;
