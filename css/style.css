@@ -501,7 +501,6 @@ span {
 }
 .veille h2 {
   font-size: 18px;
-  text-decoration: underline;
 }
 
 .veille p{
@@ -535,7 +534,7 @@ span {
 
 /* Styles pour les titres des articles de veille */
 .article h3 {
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 1rem;
 }
 
@@ -737,6 +736,7 @@ footer {
 
 /* Media queries pour les écrans jusqu'à 768px de largeur */
 @media (max-width: 768px) {
+
   .header {
     background: var(--bg-color);
   }
@@ -780,7 +780,17 @@ footer {
     margin-bottom: 2rem;
   }
 
+  .veille h3 {
+    font-size: 14px;
+  }
+
   .veille-content {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 532px) {
+  .veille-content {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
