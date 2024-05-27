@@ -313,6 +313,18 @@ span {
   color: var(--second-bg-color);
 }
 
+.voir-plus {
+  display: inline-block;
+  margin-left: auto;
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.voir-plus:hover {
+  text-decoration: underline; /* Ajoute le soulignement au survol */
+}
+
 .education {
   display: flex;
   justify-content: center;
@@ -478,7 +490,6 @@ span {
   color: var(--second-bg-color);
 }
 
-
 /* Styles pour la section Veille */
 .veille {
   display: flex;
@@ -488,7 +499,15 @@ span {
   background: var(--bg-color);
   padding: 10rem 9% 5rem;
 }
+.veille h2 {
+  font-size: 18px;
+  text-decoration: underline;
+}
 
+.veille p{
+  font-size: 14px;
+  margin: 2rem 0 3rem;
+}
 /* Styles pour le titre de la section Veille */
 .veille .heading {
   font-size: 25px;
@@ -499,7 +518,7 @@ span {
 /* Styles pour le contenu de la section Veille */
 .veille-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   justify-content: center;
   align-items: center;
@@ -508,7 +527,8 @@ span {
 /* Styles pour les articles de veille */
 .article {
   background: var(--second-bg-color);
-  padding: 2rem;
+  padding: 1rem;
+  padding-bottom: 0;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
@@ -537,6 +557,7 @@ span {
 .contact {
   min-height: auto;
   padding-bottom: 5rem;
+  background: var(--second-bg-color);
 }
 
 /* Styles pour le formulaire de contact */
@@ -634,7 +655,7 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem 9%;
-  background: var(--second-bg-color);
+  background: var(--bg-color);
 }
 
 /* Styles pour le bouton de retour en haut dans le pied de page */
@@ -705,6 +726,10 @@ footer {
     padding-bottom: 6rem;
   }
 
+  .veille {
+    padding-bottom: 6rem;
+  }
+
   .footer {
     padding: 2rem 4%;
   }
@@ -748,6 +773,14 @@ footer {
   }
 
   .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .veille h2 {
+    margin-bottom: 2rem;
+  }
+
+  .veille-content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
